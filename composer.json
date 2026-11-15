@@ -1,0 +1,43 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "funseco/tmx-plugin",
+    "description": "Funseco TMX integration — map search, download, and admin commands",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.2",
+        "funseco/core": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Funseco\\Tmx\\": "src/"
+        }
+    },
+    "extra": {
+        "funseco": {
+            "id": "tmx",
+            "name": "Tmx",
+            "description": "TMX integration — map search, download, and admin commands",
+            "provider": "Funseco\\Tmx\\TmxServiceProvider"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "require-dev": {
+        "funseco/admin-plugin": "@dev",
+        "funseco/jukebox-plugin": "@dev",
+        "funseco/records-plugin": "@dev",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.5.3"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Funseco\\Tmx\\Tests\\": "tests/"
+        }
+    }
+}
