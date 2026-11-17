@@ -268,7 +268,7 @@ class TmxLookupTest extends TestCase
 
         $this->calls = [];
         ManiaLink::dispatchAnswer($this->alice, ManiaLink::getAction('tmx_xlist_1_add'));   // /add is off
-        $this->assertContains(format_colors('{#server}> {#highlite}/add{#emotic} is not currently enabled on this server.'), $this->messages());
+        $this->assertContains(format_colors('{#server}> {#highlite}/add{#orange} is not currently enabled on this server.'), $this->messages());
 
         $this->urls = [];
         ManiaLink::dispatchAnswer($this->alice, ManiaLink::getAction('tmx_xlist_2_auth'));
